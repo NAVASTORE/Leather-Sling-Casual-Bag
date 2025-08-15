@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leather Sling Casual Bag - AZIZI STORE</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'accent': '#c0c0c0',
+                        'dark-gray': '#4a4a4a',
+                        'light-gray': '#9a9a9a',
+                    },
+                    fontFamily: {
+                        'heading': ['Poppins', 'sans-serif'],
+                        'body': ['Roboto', 'sans-serif'],
+                    },
+                    animation: {
+                        'slide-in': 'slideIn 0.5s ease-out forwards',
+                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    },
+                    keyframes: {
+                        slideIn: {
+                            '0%': { transform: 'translateX(100%)' },
+                            '100%': { transform: 'translateX(0)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom CSS for glassmorphism and animations */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+        }
+        
+        .product-gallery img {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .product-gallery img:hover {
+            transform: scale(1.03);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+        
+        .feature-card {
+            transition: transform 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #000000 0%, #4a4a4a 100%);
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            background: linear-gradient(135deg, #4a4a4a 0%, #000000 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .countdown-number {
+            animation: pulse-slow 3s infinite;
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        .floating {
+            animation: float 4s ease-in-out infinite;
+        }
+        
+        .social-proof-item {
+            border-left: 4px solid #c0c0c0;
+        }
+        
+        /* OrderOnline Form Styling */
+        .orderonline-form {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(192, 192, 192, 0.15) 100%);
+            backdrop-filter: blur(10px);
+            border-radius: 16px;
+            padding: 2rem;
+        }
+        
+        /* Mobile Navigation */
+        .mobile-menu {
+            transform: translateX(100%);
+            transition: transform 0.3s ease-in-out;
+        }
+        
+        .mobile-menu.open {
+            transform: translateX(0);
+        }
+    </style>
+</head>
+<body class="font-body bg-white text-dark-gray">
+    <!-- Social Proof Popup -->
+    <div id="social-proof" class="fixed top-5 right-5 z-50 w-full max-w-xs"></div>
+
+    <!-- Mobile Navigation -->
+    <div class="md:hidden fixed top-0 left-0 w-full bg-white shadow-md z-40">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="text-xl font-bold font-heading">AZIZI STORE</div>
+            <button id="mobile-menu-toggle" class="text-2xl">☰</button>
+        </div>
+    </div>
+
+    <div id="mobile-menu" class="mobile-menu fixed top-0 right-0 h-full w-3/4 bg-white shadow-lg z-50 p-6">
+        <div class="flex justify-between items-center mb-8">
+            <div class="text-xl font-bold font-heading">AZIZI STORE</div>
+            <button id="mobile-menu-close" class="text-3xl">&times;</button>
+        </div>
+        <nav class="flex flex-col space-y-4">
+            <a href="#hero" class="py-2 text-lg">Beranda</a>
+            <a href="#features" class="py-2 text-lg">Fitur</a>
+            <a href="#gallery" class="py-2 text-lg">Galeri</a>
+            <a href="#testimonials" class="py-2 text-lg">Testimoni</a>
+            <a href="#order" class="py-2 text-lg">Pesan Sekarang</a>
+        </nav>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="hero" class="relative bg-gradient-to-br from-dark-gray to-black text-white min-h-screen flex items-center overflow-hidden">
+        <div class="absolute inset-0 bg-black opacity-30"></div>
+        <div class="absolute top-0 left-0 w-full py-4 hidden md:block">
+            <div class="container mx-auto px-6 flex justify-between items-center">
+                <div class="text-2xl font-bold font-heading">AZIZI STORE</div>
+                <nav class="flex space-x-8">
+                    <a href="#features" class="hover:text-accent transition-colors">Fitur</a>
+                    <a href="#gallery" class="hover:text-accent transition-colors">Galeri</a>
+                    <a href="#testimonials" class="hover:text-accent transition-colors">Testimoni</a>
+                    <a href="#order" class="hover:text-accent transition-colors">Pesan Sekarang</a>
+                </nav>
+            </div>
+        </div>
+        
+        <div class="container mx-auto px-6 py-24 relative z-10 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-12 md:mb-0">
+                <div class="bg-accent text-black text-sm font-bold py-1 px-4 rounded-full inline-block mb-4">Tren Terbaru</div>
+                <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold font-heading leading-tight mb-6">
+                    Leather Sling Casual Bag
+                </h1>
+                <p class="text-light-gray text-xl mb-8 max-w-lg">
+                    Dari jalan santai hingga hangout di kafe, Leather Sling Casual Bag selalu jadi teman setia. Desain minimalis dengan sentuhan modern, ringan, dan pas dipadukan dengan outfit apa saja.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row items-start sm:items-center mb-8">
+                    <div class="text-3xl font-bold mr-6">Rp 185.550</div>
+                    <div class="text-light-gray line-through">Rp 389.000</div>
+                    <div class="ml-4 bg-red-600 text-white text-sm font-bold py-1 px-3 rounded-full">
+                        Hemat 52%
+                    </div>
+                </div>
+                
+                <div class="mb-8 bg-dark-gray rounded-xl p-4 inline-block">
+                    <div class="flex items-center">
+                        <div class="mr-3">
+                            <div class="w-10 h-10 rounded-full bg-accent flex items-center justify-center text-black">
+                                <span class="font-bold">!</span>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="text-accent font-bold">Penawaran Spesial!</div>
+                            <div class="text-sm">Diskon berakhir dalam:</div>
+                        </div>
+                    </div>
+                    <div id="countdown" class="flex mt-3 space-x-2">
+                        <div class="countdown-number bg-black rounded-lg w-14 h-14 flex flex-col items-center justify-center">
+                            <span id="hours" class="font-bold text-xl">00</span>
+                            <span class="text-xs">Jam</span>
+                        </div>
+                        <div class="countdown-number bg-black rounded-lg w-14 h-14 flex flex-col items-center justify-center">
+                            <span id="minutes" class="font-bold text-xl">00</span>
+                            <span class="text-xs">Menit</span>
+                        </div>
+                        <div class="countdown-number bg-black rounded-lg w-14 h-14 flex flex-col items-center justify-center">
+                            <span id="seconds" class="font-bold text-xl">00</span>
+                            <span class="text-xs">Detik</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <a href="#order" class="btn-primary inline-block py-4 px-10 rounded-full text-white font-bold text-lg shadow-lg transition-all">
+                    Pesan Sekarang
+                </a>
+                
+                <div class="mt-8 flex flex-wrap gap-4">
+                    <div class="flex items-center">
+                        <div class="w-8 h-8 rounded-full bg-accent flex items-center justify-center mr-2">
+                            <span class="text-black font-bold">✓</span>
+                        </div>
+                        <span>Garansi 1 Minggu</span>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="w-8 h-8 rounded-full bg-accent flex items-center justify-center mr-2">
+                            <span class="text-black font-bold">✓</span>
+                        </div>
+                        <span>Gratis Ongkir</span>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="w-8 h-8 rounded-full bg-accent flex items-center justify-center mr-2">
+                            <span class="text-black font-bold">✓</span>
+                        </div>
+                        <span>Asli 100%</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="md:w-1/2 flex justify-center">
+                <div class="relative">
+                    <div class="absolute -inset-8 bg-accent rounded-full opacity-20 blur-xl"></div>
+                    <img src="https://tempeie.com/cdn/shop/files/spp_20250730100142_810a4a4762978e0696168dbdfa63a303_77fcbc9b-5f0b-4db4-aa84-c810b366befc.png?v=1755067947&width=493" 
+                         alt="Leather Sling Casual Bag" 
+                         class="floating relative z-10 w-full max-w-md">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- USP Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold font-heading mb-4">Keunggulan Premium</h2>
+                <p class="text-light-gray">Tas yang tidak hanya bergaya, tetapi juga dibuat dengan kualitas terbaik</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="glass-card p-8 rounded-2xl shadow-lg">
+                    <div class="w-16 h-16 rounded-full bg-accent flex items-center justify-center mb-6">
+                        <span class="text-black text-2xl">✓</span>
+                    </div>
+                    <h3 class="text-xl font-bold font-heading mb-3">Bahan Berkualitas</h3>
+                    <p class="text-light-gray">Terbuat dari kulit asli berkualitas tinggi yang lembut namun kuat, tahan lama dan semakin elegan seiring waktu.</p>
+                </div>
+                
+                <div class="glass-card p-8 rounded-2xl shadow-lg">
+                    <div class="w-16 h-16 rounded-full bg-accent flex items-center justify-center mb-6">
+                        <span class="text-black text-2xl">✓</span>
+                    </div>
+                    <h3 class="text-xl font-bold font-heading mb-3">Desain Multifungsi</h3>
+                    <p class="text-light-gray">Cocok untuk aktivitas santai maupun semi-formal. Sempurna untuk berbagai kesempatan dan gaya berpakaian.</p>
+                </div>
+                
+                <div class="glass-card p-8 rounded-2xl shadow-lg">
+                    <div class="w-16 h-16 rounded-full bg-accent flex items-center justify-center mb-6">
+                        <span class="text-black text-2xl">✓</span>
+                    </div>
+                    <h3 class="text-xl font-bold font-heading mb-3">Nyaman Digunakan</h3>
+                    <p class="text-light-gray">Ringan dan ergonomis, dengan tali yang dapat disesuaikan untuk kenyamanan maksimal sepanjang hari.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-16">
+        <div class="container mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold font-heading mb-4">Galeri Produk</h2>
+                <p class="text-light-gray">Lihat setiap detail dari Leather Sling Casual Bag</p>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 product-gallery">
+                <div class="rounded-xl overflow-hidden">
+                    <img src="https://cdn.shopify.com/s/files/1/0755/8820/6804/files/spp_20250730100113_a3642a02aa615fcde4b867a0534e4823.png" 
+                         alt="Leather Sling Bag - Tampilan Depan" 
+                         class="w-full h-auto object-cover">
+                </div>
+                <div class="rounded-xl overflow-hidden">
+                    <img src="https://cdn.shopify.com/s/files/1/0705/4494/9570/files/spp_20250730100137_1fc4e411f600664b4aaea694ce38ebe1_f2cdd543-d4e8-4826-a3c8-eab7912eba0c.png?v=1755013408" 
+                         alt="Leather Sling Bag - Tampilan Belakang" 
+                         class="w-full h-auto object-cover">
+                </div>
+                <div class="rounded-xl overflow-hidden">
+                    <img src="https://cdn.shopify.com/s/files/1/0755/8820/6804/files/spp_20250730100119_b13f7a76e69a40bb51d63943694f6ec2.png" 
+                         alt="Leather Sling Bag - Detail Tali" 
+                         class="w-full h-auto object-cover">
+                </div>
+                <div class="rounded-xl overflow-hidden">
+                    <img src="https://cdn.shopify.com/s/files/1/0755/8820/6804/files/spp_20250730100124_ffad3dde08033621dbd2656d59462112.png" 
+                         alt="Leather Sling Bag - Kompartemen Utama" 
+                         class="w-full h-auto object-cover">
+                </div>
+                <div class="rounded-xl overflow-hidden">
+                    <img src="https://cdn.shopify.com/s/files/1/0755/8820/6804/files/spp_20250730100129_4f49ee4460b132e58c84b8412a5e49ab.png" 
+                         alt="Leather Sling Bag - Kompartemen Dalam" 
+                         class="w-full h-auto object-cover">
+                </div>
+                <div class="rounded-xl overflow-hidden">
+                    <img src="https://cdn.shopify.com/s/files/1/0705/4494/9570/files/spp_20250730100141_208f26bde238c4daea1cc8849460bb9e_625dcee0-092f-4a4a-bca2-ea9627b58516.png?v=1755013408" 
+                         alt="Leather Sling Bag - Tampilan Samping" 
+                         class="w-full h-auto object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold font-heading mb-4">Desain Simpel Namun Elegan</h2>
+                <p class="text-light-gray">Setiap detail dirancang untuk kenyamanan dan gaya</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="feature-card bg-white p-6 rounded-2xl shadow-lg">
+                        <div class="text-5xl font-bold text-accent mb-3">01</div>
+                        <h3 class="text-xl font-bold font-heading mb-2">Material Premium</h3>
+                        <p class="text-light-gray">Kulit asli berkualitas tinggi dengan finishing anti air</p>
+                    </div>
+                    <div class="feature-card bg-white p-6 rounded-2xl shadow-lg">
+                        <div class="text-5xl font-bold text-accent mb-3">02</div>
+                        <h3 class="text-xl font-bold font-heading mb-2">Kompartemen Luas</h3>
+                        <p class="text-light-gray">Ruang utama luas + kompartemen khusus untuk ponsel dan aksesoris</p>
+                    </div>
+                    <div class="feature-card bg-white p-6 rounded-2xl shadow-lg">
+                        <div class="text-5xl font-bold text-accent mb-3">03</div>
+                        <h3 class="text-xl font-bold font-heading mb-2">Tali Adjustable</h3>
+                        <p class="text-light-gray">Tali yang dapat disesuaikan untuk berbagai tinggi badan</p>
+                    </div>
+                    <div class="feature-card bg-white p-6 rounded-2xl shadow-lg">
+                        <div class="text-5xl font-bold text-accent mb-3">04</div>
+                        <h3 class="text-xl font-bold font-heading mb-2">Ringan & Ergonomis</h3>
+                        <p class="text-light-gray">Hanya 450 gram, nyaman digunakan seharian</p>
+                    </div>
+                </div>
+                
+                <div class="bg-gradient-to-br from-dark-gray to-black rounded-2xl p-8 text-white">
+                    <h3 class="text-2xl font-bold font-heading mb-6">Spesifikasi Teknis</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <div class="w-6 h-6 rounded-full bg-accent flex items-center justify-center mr-3 mt-1 flex-shrink-0">
+                                <span class="text-black text-sm">✓</span>
+                            </div>
+                            <span>Material: Kulit Asli Berkualitas Tinggi</span>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="w-6 h-6 rounded-full bg-accent flex items-center justify-center mr-3 mt-1 flex-shrink-0">
+                                <span class="text-black text-sm">✓</span>
+                            </div>
+                            <span>Dimensi: 25cm x 15cm x 8cm</span>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="w-6 h-6 rounded-full bg-accent flex items-center justify-center mr-3 mt-1 flex-shrink-0">
+                                <span class="text-black text-sm">✓</span>
+                            </div>
+                            <span>Berat: 450 gram</span>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="w-6 h-6 rounded-full bg-accent flex items-center justify-center mr-3 mt-1 flex-shrink-0">
+                                <span class="text-black text-sm">✓</span>
+                            </div>
+                            <span>Warna: Hitam</span>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="w-6 h-6 rounded-full bg-accent flex items-center justify-center mr-3 mt-1 flex-shrink-0">
+                                <span class="text-black text-sm">✓</span>
+                            </div>
+                            <span>Kapasitas: Muat hingga 10" tablet + dompet + kunci + aksesoris</span>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="w-6 h-6 rounded-full bg-accent flex items-center justify-center mr-3 mt-1 flex-shrink-0">
+                                <span class="text-black text-sm">✓</span>
+                            </div>
+                            <span>Garansi: 1 minggu terhadap cacat produksi</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="py-16">
+        <div class="container mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold font-heading mb-4">Apa Kata Pelanggan Kami</h2>
+                <p class="text-light-gray">Ribuan pelanggan puas dengan kualitas dan gaya tas kami</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-gray-50 p-6 rounded-2xl">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-accent flex items-center justify-center text-black font-bold mr-4">BS</div>
+                        <div>
+                            <h4 class="font-bold">Budi Santoso</h4>
+                            <div class="flex text-yellow-400">
+                                ★★★★★
+                            </div>
+                        </div>
+                    </div>
+                    <p>"Tasnya sangat berkualitas! Kulitnya terasa premium dan desainnya sangat stylish. Cocok untuk berbagai acara."</p>
+                </div>
+                
+                <div class="bg-gray-50 p-6 rounded-2xl">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-accent flex items-center justify-center text-black font-bold mr-4">SR</div>
+                        <div>
+                            <h4 class="font-bold">Siti Rahayu</h4>
+                            <div class="flex text-yellow-400">
+                                ★★★★★
+                            </div>
+                        </div>
+                    </div>
+                    <p>"Ringan tapi muat banyak barang. Saya bisa bawa laptop tablet, dompet, dan make up dengan nyaman. Worth the price!"</p>
+                </div>
+                
+                <div class="bg-gray-50 p-6 rounded-2xl">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-accent flex items-center justify-center text-black font-bold mr-4">AW</div>
+                        <div>
+                            <h4 class="font-bold">Andi Wijaya</h4>
+                            <div class="flex text-yellow-400">
+                                ★★★★★
+                            </div>
+                        </div>
+                    </div>
+                    <p>"Pengiriman cepat dan packing rapi. Tasnya persis seperti di foto, kualitas kulitnya sangat bagus. Puas banget!"</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Order Section -->
+    <section id="order" class="py-16 bg-gradient-to-br from-dark-gray to-black text-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold font-heading mb-4">Dapatkan Leather Sling Casual Bag Sekarang</h2>
+                    <p class="text-light-gray">Diskon spesial terbatas untuk pembelian hari ini</p>
+                </div>
+                
+                <div class="flex flex-col md:flex-row gap-8">
+                    <div class="md:w-1/2">
+                        <div class="bg-white/10 rounded-2xl p-8 mb-8">
+                            <div class="flex justify-between items-start mb-6">
+                                <div>
+                                    <div class="text-3xl font-bold">Rp 185.550</div>
+                                    <div class="text-light-gray line-through">Rp 389.000</div>
+                                </div>
+                                <div class="bg-red-600 text-white text-sm font-bold py-1 px-3 rounded-full">
+                                    Hemat 52%
+                                </div>
+                            </div>
+                            
+                            <ul class="space-y-3 mb-8">
+                                <li class="flex items-center">
+                                    <div class="w-6 h-6 rounded-full bg-accent flex items-center justify-center mr-3">
+                                        <span class="text-black text-xs">✓</span>
+                                    </div>
+                                    <span>Gratis Ongkir ke Seluruh Indonesia</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <div class="w-6 h-6 rounded-full bg-accent flex items-center justify-center mr-3">
+                                        <span class="text-black text-xs">✓</span>
+                                    </div>
+                                    <span>Garansi 1 Tahun</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <div class="w-6 h-6 rounded-full bg-accent flex items-center justify-center mr-3">
+                                        <span class="text-black text-xs">✓</span>
+                                    </div>
+                                    <span>Pengiriman Cepat 1-3 Hari</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <div class="w-6 h-6 rounded-full bg-accent flex items-center justify-center mr-3">
+                                        <span class="text-black text-xs">✓</span>
+                                    </div>
+                                    <span>Bahan Kulit Asli Premium</span>
+                                </li>
+                            </ul>
+                            
+                            <div class="bg-black/30 rounded-xl p-4">
+                                <div class="flex items-center">
+                                    <div class="text-accent text-3xl mr-3">!</div>
+                                    <div>
+                                        <div class="font-bold">Stok Terbatas!</div>
+                                        <div class="text-sm">Hanya tersisa 23 buah untuk diskon ini</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+                    <div class="md:w-1/2">
+                        <div class="orderonline-form">
+                            <h3 class="text-2xl font-bold font-heading mb-6 text-center">Form Pemesanan</h3>
+                            <p class="text-light-gray text-center mb-6">Isi data diri Anda untuk memesan</p>
+                            
+                            <!-- OrderOnline Embed Code - v8.0.4 -->
+                            <div class="ooef">
+                                <form class="orderonline-embed-form" data-username="nava" data-product-slug="leather-sling-casual-bag" data-product-id="689dd93018669ee07a0aa5ec" id="oo-embed-form-leather-sling-casual-bag-4758" data-origin="orderonline">
+                                    <div class="ooef-loader"><style>.ooef-loader{visibility: hidden;opacity: 0;position: absolute;left: 0;right: 0;top: 0;bottom: 0;display: flex;justify-content: center;align-items: center;flex-direction: column;animation: ooLoadingIn 10s ease;-webkit-animation: ooLoadingIn 10s ease;animation-fill-mode: forwards;overflow: hidden}@keyframes ooLoadingIn{0%{visibility: hidden;opacity: 0}20%{visibility: visible;opacity: 0}100%{visibility: visible;opacity: 1}}@-webkit-keyframes ooLoadingIn{0%{visibility: hidden;opacity: 0}20%{visibility: visible;opacity: 0}100%{visibility: visible;opacity: 1}}.ooef-loader>div,.ooef-loader>div:after{border-radius: 50%;width: 2.5rem;height: 2.5rem}.ooef-loader>div{font-size: 10px;position: relative;text-indent: -9999em;border: .25rem solid #f5f5f5;border-left: .25rem solid #55c4cf;-webkit-transform: translateZ(0);-ms-transform: translateZ(0);transform: translateZ(0);-webkit-animation: ooLoading 1.1s infinite linear;animation: ooLoading 1.1s infinite linear}.ooef-loader.error>div{border-left: .25rem solid #ff4500;animation-duration: 5s}@-webkit-keyframes ooLoading{0%{-webkit-transform: rotate(0);transform: rotate(0)}100%{-webkit-transform: rotate(360deg);transform: rotate(360deg)}}@keyframes ooLoading{0%{-webkit-transform: rotate(0);transform: rotate(0)}100%{-webkit-transform: rotate(360deg);transform: rotate(360deg)}}</style><div aria-live="polite" role="status"><div>Loading...</div></div></div>
+                                </form>
+                            </div>
+                            <script>
+                                if (typeof xLogError != 'function') {
+                                    var xLogError = function (error) {
+                                        var req = new XMLHttpRequest();
+                                        var payload = JSON.stringify({ url: document.location.href, line: error.line, stack: error.stack });
+                                        var params = 'message=' + encodeURIComponent(error.name) + '&payload=' + encodeURIComponent(payload) + '&type=embed&level=error';
+                                        req.open('POST', 'https://api.orderonline.id/log', true);
+                                        req.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+                                        req.send(params);
+                                    };
+                                }
+                                try {
+                                    if (typeof xEmbedScript != 'function') {
+                                        var xEmbedScript = function () {
+                                            !function(w, d, e, v, id, t, s) {
+                                                if (d.getElementById(id)) return;
+                                                t = d.createElement(e);t.async = !0;t.src = v;t.id = id;
+                                                s = d.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s);
+                                            }(window, document, 'script', 'https://cdn.orderonline.id/js/embed-v2-slim.min.js?v=8.0.4', 'oo-embed-js');
+                                        };
+                                    }
+                                    if (typeof xEmbedInit != 'function') {
+                                        var xEmbedInit = function (w, n) {
+                                            if (w.ooe) return;
+                                            n = w.ooe = function() { n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments) };
+                                            if (!w._ooe) w._ooe = n;
+                                            n.push = n;n.loaded = !0;n.version = '8.0.4';n.queue = [];
+                                        };
+                                    }
+                                    xEmbedInit(window);
+                                    ooe('setup', 'redirect', 'https://nava.orderonline.id');
+                                    ooe('init', '5f119cd08dcbdb2737678706', '689dd93018669ee07a0aa5ec', '689dd93018669ee07a0aa5ed', 'oo-embed-form-leather-sling-casual-bag-4758', {"mode":"page","action":"Klik untuk pemesanan","title":"Form Pemesanan","triggerPixel":true,"triggerGtm":true});
+                                    if (!window.jQuery) {
+                                        !function(w, d, e, v, id, t, s) {
+                                            if (d.getElementById(id)) return;
+                                            t = d.createElement(e);t.async = !0;t.src = v;t.id = id;
+                                            t.addEventListener('load', xEmbedScript);
+                                            s = d.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s);
+                                        }(window, document, 'script', 'https://cdn.orderonline.id/js/vendor/jquery.min.js', 'oo-embed-jquery');
+                                    } else {
+                                        xEmbedScript();
+                                    }
+                                } catch (e) {
+                                    xLogError(e);
+                                    throw e;
+                                }
+                            </script>
+                            <!-- End OrderOnline Embed Code -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Sticky CTA Button -->
+    <a href="#order" class="fixed bottom-6 right-6 btn-primary py-3 px-6 rounded-full text-white font-bold shadow-lg z-40 transition-all transform hover:scale-105">
+        Pesan Sekarang
+    </a>
+
+    <script>
+        // Social Proof Popup System
+        const customerNames = ['Vina', 'Dina', 'Kartika', 'Lestari', 'Putri', 'Maya Sari', 'Rani', 'Permata', 'Lestari F'];
+        const customerCities = ['Jakarta', 'Surabaya', 'Bandung', 'Medan', 'Bekasi', 'Tangerang', 'Depok', 'Semarang'];
+        
+        let popupTimer;
+        let popupDisplayTimer;
+        
+        function showSocialProof() {
+            const name = customerNames[Math.floor(Math.random() * customerNames.length)];
+            const city = customerCities[Math.floor(Math.random() * customerCities.length)];
+            const minutesAgo = Math.floor(Math.random() * 15) + 1;
+            
+            const popup = document.createElement('div');
+            popup.className = 'social-proof-item bg-white p-4 rounded-lg shadow-lg mb-4 flex items-start animate-slide-in';
+            popup.innerHTML = `
+                <div class="w-10 h-10 rounded-full bg-accent flex items-center justify-center mr-3 flex-shrink-0">
+                    <span class="text-black font-bold text-sm">${name.charAt(0)}</span>
+                </div>
+                <div>
+                    <div class="font-bold">${name} dari ${city}</div>
+                    <div class="text-sm text-light-gray">Baru saja memesan Leather Sling Casual Bag</div>
+                    <div class="text-xs text-light-gray mt-1">${minutesAgo} menit yang lalu</div>
+                </div>
+            `;
+            
+            const container = document.getElementById('social-proof');
+            container.appendChild(popup);
+            
+            // Auto remove after 5 seconds
+            popupDisplayTimer = setTimeout(() => {
+                popup.style.opacity = '0';
+                popup.style.transform = 'translateX(20px)';
+                setTimeout(() => {
+                    popup.remove();
+                }, 300);
+            }, 5000);
+            
+            // Pause on hover
+            popup.addEventListener('mouseenter', () => {
+                clearTimeout(popupDisplayTimer);
+            });
+            
+            popup.addEventListener('mouseleave', () => {
+                popupDisplayTimer = setTimeout(() => {
+                    popup.style.opacity = '0';
+                    popup.style.transform = 'translateX(20px)';
+                    setTimeout(() => {
+                        popup.remove();
+                    }, 300);
+                }, 5000);
+            });
+        }
+        
+        // Initialize social proof
+        function initSocialProof() {
+            showSocialProof();
+            popupTimer = setInterval(showSocialProof, 10000);
+        }
+        
+        // Countdown Timer
+        function updateCountdown() {
+            const now = new Date();
+            const tomorrow = new Date(now);
+            tomorrow.setDate(tomorrow.getDate() + 1);
+            tomorrow.setHours(0, 0, 0, 0);
+            
+            const diff = tomorrow - now;
+            
+            const hours = Math.floor(diff / (1000 * 60 * 60));
+            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+            
+            document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+            document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+            document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+        }
+        
+        // Mobile Menu
+        document.getElementById('mobile-menu-toggle').addEventListener('click', () => {
+            document.getElementById('mobile-menu').classList.add('open');
+        });
+        
+        document.getElementById('mobile-menu-close').addEventListener('click', () => {
+            document.getElementById('mobile-menu').classList.remove('open');
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    document.getElementById('mobile-menu').classList.remove('open');
+                }
+            });
+        });
+        
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            initSocialProof();
+            updateCountdown();
+            setInterval(updateCountdown, 1000);
+            
+            // Initialize OrderOnline script
+            if (typeof xEmbedScript != 'function') {
+                var xEmbedScript = function () {
+                    !function(w, d, e, v, id, t, s) {
+                        if (d.getElementById(id)) return;
+                        t = d.createElement(e);t.async = !0;t.src = v;t.id = id;
+                        s = d.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s);
+                    }(window, document, 'script', 'https://cdn.orderonline.id/js/embed-v2-slim.min.js?v=8.0.4', 'oo-embed-js');
+                };
+            }
+            
+            if (typeof xEmbedInit != 'function') {
+                var xEmbedInit = function (w, n) {
+                    if (w.ooe) return;
+                    n = w.ooe = function() {
+                        n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+                    };
+                    if (!w._ooe) w._ooe = n;
+                    n.push = n;n.loaded = !0;n.version = '8.0.4';n.queue = [];
+                };
+            }
+            
+        });
+    </script>
+</body>
+</html>
